@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-Week 2, Day 4 concentrates on ...
+At the beginning of Week 2, Day 4, Mike Kestemont introduces text analytics with Python, concentrating on *bag of words* methods. In the afternoon we continue our earlier examination of collation and then begin to explore documents using XQuery within the eXist XML database.
 
 ## Outcome goals
 
@@ -15,9 +15,34 @@ Week 2, Day 4 concentrates on ...
 
 -------
 
-## 9:00–10:30: Modeling: annotations as layers to the text
+## 9:00–10:30: Text analytics 1
 
-### Topics and Activities
+MK: Bag of words, text processing, text as tables, query the tables
+
+## 10:30–11:00: Coffee break
+
+## 11:00–12:30: Text analytics 1 (cont.)
+
+MK: Bag of words, text processing, text as tables, query the tables (continued)
+
+## 12:30–2:00: Lunch
+
+## 3:00–4:30: Collation
+
+Time | Activity | Type
+---- | ---- | ----
+15 min | Install Collatex (`collatex_installation.ipynb`) | Code lab
+15 min | The CollateX interface (`collation/1_collate-plain-text.ipynb`) | Code lab
+10 min | Collatex output options (`collation/3_collate-plain-text.ipynb`) | Code lab
+20 min | Collation outside Jupyter (`collation/3_collate-plain-text.ipynb`) | Code lab
+30 min | Customizing tokenization and normalization (`Integrating_tokenization_and_normalization.ipynb`) | Code lab
+
+
+## 3:30–4:00: Coffee break
+
+## 4:00–5:30: [Modeling: exploring the model with XQuery](explore_model_xquery.md)
+
+<!-- ### Topics and Activities
 * Recap of the topics that have been discussed so far: tokenization, normalization, and collation from the point of view of annotations (as each of these activities entails a form of annotation)
 * Envisioning your edition as a layered model
 * Existing models (e.g. computational linguitics) 
@@ -28,40 +53,5 @@ Week 2, Day 4 concentrates on ...
 * Grasping the concept of modelling text as trees and graphs
 * Understanding annotation as a form of adding layers to text
 * Varieties of layered editions
-
-## 10:30–11:00: Coffee break
-
-### Outcome goals
-* Have more energy
-
-## 11:00–12:30: Collation 2
-
-### Topics and Activities
-* Advanced collation
-* Near-matching - theory (as step in the computational pipeline) 
-* **Hands-on**: ...
-
-### Outcome goals
-* Deeper discussion of the alignment step in the GM
-* An awareness of computation to understand that we do near-matching late (in the pipeline) for reasons of efficiency. 
-
-## 12:30–2:00: Lunch
-
-## 2:00–3:30: Text analytics 1
-
-MK: Bag of words, text processing, text as tables, query the tables
-
-### Outcome goals
-* _[some text here]_
-
-## Coffee / Tea
-
-## 4:00–5:30: Text analytics 2
-
-MK: Bag of words, text processing, text as tables, query the tables (continued)
-
-#### Outcome goals
-* _[some text here]_
-
-
+* -->
 

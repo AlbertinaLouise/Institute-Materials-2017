@@ -2,12 +2,17 @@
 
 ## Synopsis
 
-The first half of Week 2, Day 2 continues the focus on document modeling from the previous day, with attention to three models of text: XML (text as tree), LMNL (text as ranges), and TAG (text as graph). The second half of the day introduces the idea of developing a digital edition as a computational pipeline. We illustrate the pipeline with the Gothenburg model of textual variation, and then begin to explore the first two stages of that model, tokenization and normalization. 
+The first half of Week 2, Day 2 begins by contextualizing the XML and XPath tasks from the preceding day, and then introduces LMNL and TAG as alternative data models. The morning continues with a collaborative exploration of theorizing an edition, and especially of theorizing its development as a computational pipeline. The second half of the day continues the theme of the computational pipeline, which we illustrate with the Gothenburg model of textual variation, and we then practice with the first two stages of that model, tokenization and normalization. 
+
+## Installations
+
+* Java SE installation: <http://www.oracle.com/technetwork/java/javase/downloads/index.html>
+* Docker (we’ll do this together in session 1)
+* Optional: Calabash and Luminescent (instructions at the bottom of this document)
 
 ## Outcome goals
 
 * Understanding modeling perspectives (tree, ranges, graph) and communities
-* XML looks like a string but it’s really a tree. What does this mean for markup and for querying?
 * Modular development: thinking about digital edition development as a computational pipeline
 * Beginning to tokenize texts
 * Beginning to normalize texts
@@ -21,49 +26,74 @@ The first half of Week 2, Day 2 continues the focus on document modeling from th
 
 ______
 
-## 9:00–10:30: XML as a tree / XPath
+
+## 9:00–10:30: Transcription with markup: LMNL
 
 ### Topics and activities
 
 Time | Topic | Type
 ---- | ---- | ----
-10 min | Review of [Week 2, Day 1](week_2_day_1_plan.md)<br/>Modeling and communities | Discussion
-35 min | [XPath as a way of navigating the tree](xpath.md) (using [*Hamlet*](hamlet.xml) in \<oXygen/\>) | Code Lab
-20 min | XPath navigation of overlap in [“Ozymandias”](ozymandias.xml):<br/>Find 1) phrases, 2) enjambments, and 3) metrical lines| Code lab
-15 min | The [cost of workarounds during processing](overlap_xml.md) | Presentation
-10 min | What’s so bad about markup semantics, the application layer, and workarounds? | Discussion
+10 min | Review of [week 2, day 1](week_2_day_1_plan.md) | Discussion
+10 min | [Introduction to the LMNL data model and sawtooth syntax](lmnl_syntax.md) | Presentation
+20 min | Tag [“Ozymandias”](ozymandias.txt) in LMNL | Code lab
+20 min | Introduction to TAG and Alexandria | Presentation
+15 min | [Alexandria installation](alexandria.md) | Code lab
+15 min | Visualization of LMNL in Alexandria | Code lab
 
 ## 10:30–11:00: Coffee break
 
-## 11:00–12:30: Transcription with markup: LMNL
+## 11:00–12:30: Theory of edition
 
-### Topics and activities
+Are you making an edition of a manuscript or of a text? What is the role of language and orthography in your edition? How will the text be presented? How will users interact with the views? What will be the role of graphic visualization?
 
 Time | Topic | Type
----- | ---- | ----
-20 min | [Introduction to the LMNL data model and sawtooth syntax](lmnl_syntax.md) | Presentation
-20 min | Tag [“Ozymandias”](ozymandias.txt) in LMNL | Code lab
-20 min | Introduction to TAG and Alexandria | Presentation
-20 min | [Alexandria installation](alexandria.md) | Code lab
-20 min | Visualization of LMNL in Alexandria | Code lab
+---- | ----  | ----
+20 min | Explore [edition terms and concepts](edition_terms_and_concepts.md) | Discussion
+20 min | It isn’t just words! [What story are you trying to tell?](sample_visualizations.md) | Discussion
+30 min | Explore participant data in light of terms and concepts | Talk lab
+20 min | General discussion of Talk lab results | Discussion
 
 ## 12:30–2:00: Lunch
 
-## 2:00–3:30: Tokenization
+## 2:00–3:30: [Tokenization](Tokenization.ipynb)
+
+When you have transcribed your text and are ready to process it (this could mean making a collation, or making a word cloud, or doing some experiements with stylometrics, or many other things), you will need to transform the text into a list of words. Conceptually this doesn't seem like a big deal, but many pitfalls can lie within...
+
+Time | Topic | Type
+---- | ----- | ----
+20 min | Intro and setup | Discussion, Code lab
+30 min | Tokenizing plain text | Code lab
+30 min | Tokenizing XML | Code lab
+20 min | Further challenges in tokenization | Discussion
   
 ## 3:30–4:00: Coffee break
 
 ## 4:00–5:30: Normalization
 
+### Before we start
+
+1. Navigate to your fork of our Institute repo and run `git pull upstream master`.
+2. Start Jupyter notebook either from the Anaconda launcher or by navigating to your home directory and typing `jupyter notebook`.
+3. Within the main Jupyter notebook web page, navigate to schedule/week_2 in your fork of our repo and open `Normalization.ipynb`, `Unicode-normalization.ipynb`, `Normalization_examples.ipynb`, and `Integrating_XML_with_Python.ipynb`.
+
+Time | Topic | Type
+---- | ---- | ----
+30 min | About normalization (`Normalization.ipynb` notebook) | Code lab
+10 min | Unicode normalization (`Unicode-normalization.ipynb` notebook) | Presentation
+20 min | Normalization examples (`Normalization_examples.ipynb` notebook) | Presentation
+30 min | Normalizing XML input (`Integrating_XML_with_Python.ipynb` notebook) | Code lab
+
 ## Homework
 
 Please complete [Week 2, Day 2 feedback](week_2_day_2_feedback.md) (just copy and paste it into a plain-text document) and email your response to Kaylen at [kaylensanders@pitt.edu](mailto:kaylensanders@pitt.edu) with the subject heading “Week 2, Day 2 feedback”.
 
-## Reading (optional)
+## Unicode tools
 
-* [“What can XPath do for me?”](http://dh.obdurodon.org/introduction-xpath.xhtml)
+* Richard Ishida’s [Unicode code converter](https://r12a.github.io/apps/conversion/)
+* `xxd` (command line utility)
+* [Unicode checker](http://earthlingsoft.net/UnicodeChecker/) (Mac OS only; sorry!)
 
-## Follow-up optional
+## LMNL follow-up (optional)
 
 You can check your LMNL for well-formedness with the following procedure:
 
